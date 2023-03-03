@@ -22,4 +22,11 @@ export const updateSchema = {
         })
     }).options({ allowUnknown: true })
   };
-  
+  export const headersSchema ={
+    headers: joi.object({
+      'authorization': joi.string().required().messages({
+          "any.required":"headers must have  abearerkey"
+      })
+  }).options({ allowUnknown: true })
+
+  }
